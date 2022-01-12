@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2
+{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 25px;
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+p, li
+{
+    position: static;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.general
+{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background: #000;
+}
+
+.container__about
+{
+    position: relative;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+}
+.container__about .title
+{
+    width: 401px;
+    margin-bottom: 70px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 75px;
+    color: #ffffff;
+}
+.container__about .about
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 460px;
+}
+.about .about__me
+{
+    display: flex;
+    justify-content: center;
+}
+.about .about__me .card
+{
+    width: 200px;
+    margin-bottom: 30px;
+}
+.about .about__me .card img
+{
+    width: 30px;
+}
+.subtitle
+{
+    position: static;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+.skils__line .line
+{
+    position: static;
+    height: 7px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    z-index: 1;
+}
+.skils__line .line-1
+{
+    width: 230px;
+}
+.skils__line .line-2
+{
+    width: 100px;
+}
+.skils__line .line-3
+{
+    width: 230px;
+}
+.line::before
+{
+    content: '';
+    position: absolute;
+    width: 460px;
+    height: 7px;
+    left: 0px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.container__descr
+{
+    position: relative;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+}
+.container__descr h2
+{
+    margin-bottom: 15px;
+}
+.container__descr p
+{
+    margin-bottom: 50px;
+}
+.descr__needs
+{
+    margin-bottom: 45px;
+}
+.container__descr li
+{
+    margin-top: 10px;
+}
+
+.container__foto
+{
+    position: relative;
+    width: 460px;
+    height: 750px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    background-image: url(../icon/photo.png);
+}
+.container__foto .foto__descr
+{
+    position: absolute;
+    bottom: 80px;
+}
+.container__foto p
+{
+    width: 360px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1530px) {
+    .general
+    {
+        height: 100%;
+        padding: 20px;
+    }
+    .container__about
+    {
+        width: 40%;
+    }
+    .container__descr
+    {
+        margin-top: 50px;
+        width: 80%;
+        order: 1;
+    }
+}
+@media screen and (max-width: 1057px) {
+    .container__about
+    {
+        margin-right: 0;
+        text-align: center;
+        width: 500px;
+    }
+    .container__about h1
+    {
+        text-align: start;
+    }
+    .container__about .card
+    {
+        text-align: center;
+    }
+    .container__about .skils__line .subtitle
+    {
+        text-align: start;
+    }
+    .container__foto
+    {
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    .container__descr h2
+    {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 600px) {
+    /* img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      } */
+    img
+    {
+        display: inline;
+        height: auto;
+        max-width: 100%;
+    }
+    .container__about
+    {
+        margin: 0;
+        width: 100%;
+    }
+    .container__about .about
+    {
+        width: 100%;
+        align-items: inherit;
+    }
+    .container__about .title 
+    {
+        font-size: 50px;
+    }
+    .about .about__me 
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container__about .title
+    {
+        width: 100%;
+        margin-right: 10px;
+    }
+    .line::before
+    {
+        width: 100%;
+    }
+    .container__descr 
+    {
+        width: 90%;
+    }
+    .container__foto p
+    {
+        width: 100%;
+    }
+    
+}
